@@ -5,20 +5,36 @@
 ## 5. Check if Num is divisible by 3 and 5, if so print "FizzBuzz"
 
 
-from unittest import result
-
-
 def fizz_buzz(number):
-    results: list[str] 
+    result: list[str] = []
 
     for index in range(1, number + 1):
         if index % 3 == 0 and index % 5 == 0:
-            result[index - 1] = "FizzBuzz"
+            result.append("FizzBuzz")
         elif index % 3 == 0:
-            result[index - 1] = "Fizz"
+            result.append("Fizz")
         elif index % 5 == 0:
-            result[index - 1] = "Buzz"
+            result.append("Buzz")
+        else:
+            result.append(str(index))
     return result
 
-n = 10
-print(fizz_buzz(n))
+
+def _prompt_number(default: int = 10) -> int:
+    while True:
+        try:
+            raw = input(f"Enter a positive integer (default {default}): ").strip()
+            if raw == "":
+                return default
+            value = int(raw)
+            if value < 1:
+                raise ValueError
+            return value
+        except ValueError:
+            print("Invalid input. Please enter a positive integer.")
+
+
+if __name__ == "__main__":
+    n = _prompt_number()
+    for line in fizz_buzz(n):
+        print(line)
