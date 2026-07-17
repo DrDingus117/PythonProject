@@ -11,3 +11,5 @@ Fizzbuzz: Inpur a number between 1 to 10, if a number matches what's in the code
 Number Guess: Put in a number between 1 and 10, if right you win, but if wrong it'll tell you "Too High!" and "Too Low!"
 
 Vowel Game: Spell a word with A, E, I, O, or U, you win, if you put in any other letter though it'll list what is and isn't a vowel.
+
+Paragraph Game: Counts the total words and word length 
