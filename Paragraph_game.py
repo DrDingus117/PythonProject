@@ -11,6 +11,13 @@ def text_analysis():
 
     total_words = len(words)
 
+    if total_words == 0:
+        print("\nText Analysis Summary")
+        print("---------------------")
+        print("Total words: 0")
+        print("Average word length: 0.00")
+        return
+
     total_letters = 0
 
     for word in words:
