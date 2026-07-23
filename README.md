@@ -13,3 +13,5 @@ Number Guess: Put in a number between 1 and 10, if right you win, but if wrong i
 Vowel Game: Spell a word with A, E, I, O, or U, you win, if you put in any other letter though it'll list what is and isn't a vowel.
 
 Paragraph Game: Counts the total words and word length 
+
+Frequency analysis: Edit the list to have as many items as you need, save, press the start button, and it'll show what you have.
