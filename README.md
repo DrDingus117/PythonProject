@@ -15,3 +15,34 @@ Vowel Game: Spell a word with A, E, I, O, or U, you win, if you put in any other
 Paragraph Game: Counts the total words and word length 
 
 Frequency analysis: Edit the list to have as many items as you need, save, press the start button, and it'll show what you have.
+
+## Finals
+
+Student Record Manager
+
+## Menu Options
+
+**1. Add Student**
+Prompts the user to enter a student's ID, name, age, major, and GPA.
+Creates a new student record and stores it in the program.
+
+**2. View Students**
+ Displays all student records currently stored in the program.
+
+**3. Search Student**
+ Searches for a student by their student ID and displays their information if found.
+
+**4. Update Student**
+ Allows the user to modify an existing student's name, major, or GPA by entering their student ID.
+
+**5. Delete Student**
+ Removes a student record from the program using the student's ID.
+
+**6. Save Students**
+ Saves all current student records to `students.txt` so they can be used again later.
+
+**7. Load Students**
+ Loads student records from `students.txt` into the program.
+
+**8. Exit**
+ Closes the program.
