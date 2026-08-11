@@ -1,5 +1,5 @@
 # --------------------------------------------
-# Student Record Manager
+# Student Record Manager Based off Java Version from Quarter 2
 # --------------------------------------------
 
 # Student class
@@ -24,19 +24,19 @@ students = []
 def add_student():
 
     #Example of this is 117
-    student_id = input("Student ID: ")
+    student_id = input("Student ID: ") #(Example: 117)
 
     #Example: Marcus
-    name = input("Name: ")
+    name = input("Name: ") #(Example: Marcus)
 
     #Example: 23   
-    age = int(input("Age: "))
+    age = int(input("Age: ")) #(Example: 23)
 
     #Example: Software Development
-    major = input("Major: ")
+    major = input("Major: ") #(Example: Software Development)
 
     #Example: 3.0
-    gpa = float(input("GPA: "))
+    gpa = float(input("GPA: ")) #(Example: 3.0)
 
     student = Student(student_id, name, age, major, gpa)
 
@@ -72,7 +72,7 @@ def view_students():
 # --------------------------------------------
 def search_student():
 
-    search_id = input("Enter Student ID: ")
+    search_id = input("Enter Student ID: ") #(117)
 
     for student in students:
 
@@ -96,7 +96,7 @@ def search_student():
 # --------------------------------------------
 def update_student():
 
-    search_id = input("Student ID: ")
+    search_id = input("Student ID: ") #(Example: 117 can be used to update Marcus's information)
 
     for student in students:
 
@@ -104,17 +104,17 @@ def update_student():
 
             print("Leave blank if you don't want to change a value.")
 
-            name = input("New Name: ")
+            name = input("New Name: ") #(Example: Marcus))
 
             if name != "":
                 student.name = name
 
-            major = input("New Major: ")
+            major = input("New Major: ") #(Example: Cybersecurity)
 
             if major != "":
                 student.major = major
 
-            gpa = input("New GPA: ")
+            gpa = input("New GPA: ") #(Example: 3.5)
 
             if gpa != "":
                 student.gpa = float(gpa)
@@ -131,7 +131,7 @@ def update_student():
 # --------------------------------------------
 def delete_student():
 
-    search_id = input("Student ID: ")
+    search_id = input("Student ID: ") #(Example: 117 deletes Marcus from the list)
 
     for student in students:
 
@@ -151,7 +151,7 @@ def delete_student():
 # --------------------------------------------
 def save_students():
 
-    file = open("students.txt", "w")
+    file = open("students.txt", "w") #(Example: students.txt is the file that will be created to save the students. Holds 117 for Marcus)
 
     for student in students:
 
@@ -177,7 +177,7 @@ def load_students():
 
     try:
 
-        file = open("students.txt", "r")
+        file = open("students.txt", "r") #(Example: students.txt is the file that will be opened to load the students. Holds 117 for Marcus)
 
         for line in file:
 
@@ -209,7 +209,7 @@ def menu():
 
     while True:
 
-        print("===== Student Record Manager =====")
+        print("===== Student Record Manager=====")
         print("1. Add Student")
         print("2. View Students")
         print("3. Search Student")
