@@ -23,19 +23,14 @@ students = []
 # --------------------------------------------
 def add_student():
 
-    #Example of this is 117
     student_id = input("Student ID: ") #(Example: 117)
 
-    #Example: Marcus
     name = input("Name: ") #(Example: Marcus)
 
-    #Example: 23   
     age = int(input("Age: ")) #(Example: 23)
 
-    #Example: Software Development
     major = input("Major: ") #(Example: Software Development)
 
-    #Example: 3.0
     gpa = float(input("GPA: ")) #(Example: 3.0)
 
     student = Student(student_id, name, age, major, gpa)
