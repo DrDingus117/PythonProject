@@ -87,8 +87,54 @@ def delete_student():
 
     print("Student not available. Please try again.")
 
+# 6: Saving Students
 
-# 6: Menu
+def save_students():
+    with open("students.txt", "w") as file:
+        for student in students:
+            file.write(
+                student.student_name + "," +
+                student.student_id + "," +
+                student.grades + "," +
+                student.program + "," +
+                str(student.age) + "," +
+                student.quarter + "\n"
+            )
+
+    print("Students saved")
+
+#7 Load Students
+
+def load_students():
+    try:
+        with open("students.txt", "r") as file:
+            for line in file:
+                data = line.strip().split(",")
+
+                student_name = data[0]
+                student_id = data[1]
+                grades = data[2]
+                program = data[3]
+                age = int(data[4])
+                quarter = data[5]
+
+                student = Student(
+                    student_name,
+                    student_id,
+                    grades,
+                    program,
+                    age,
+                    quarter
+                )
+
+                students.append(student)
+
+        print("Students loaded")
+
+    except FileNotFoundError:
+        print("No student file found. Starting with an empty list.")
+
+# 8: Menu
 
 def menu():
     while True:
@@ -97,7 +143,8 @@ def menu():
         print("2. View Students")
         print("3. Edit Student")
         print("4. Delete Student")
-        print("5. Exit")
+        print("5. Save Students")
+        print("6. Exit")
 
         choice = input("Enter the choice you want to do: ")
 
@@ -114,6 +161,11 @@ def menu():
             delete_student()
 
         elif choice == "5":
+            save_students()
+
+        
+
+        elif choice == "6":
             print("See Ya!")
             break
 
