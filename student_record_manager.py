@@ -29,14 +29,25 @@ def add_student():
 
     students.append(student)
 
+#3  Viewing Student 
 
-# 3: Menu
+def view_students():
+    print("\nStudent Records")
+
+    for student in students:
+        print("\nName:", student.student_name)
+        print("ID:", student.student_id)
+        print("Grades:", student.grades)
+        print("Program:", student.program)
+        print("Age:", student.age)
+        print("Quarter:", student.quarter)
 
 def menu():
     while True:
         print("\nStudent Record Manager")
         print("1. Add Student")
-        print("2. Exit")
+        print("2. View Students")
+        print("3. Exit")
 
         choice = input("Enter the choice you want to do: ")
 
@@ -44,6 +55,9 @@ def menu():
             add_student()
 
         elif choice == "2":
+            view_students()
+
+        elif choice == "3":
             print("See Ya!")
             break
 
