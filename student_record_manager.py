@@ -22,7 +22,14 @@ def add_student():
     student_id = input("Enter student ID: ")
     grades = input("Enter student grades (comma-separated): ")
     program = input("Enter student program: ")
-    age = int(input("Enter student age: "))
+
+    while True:
+        try:
+            age = int(input("Enter student age: "))
+            break
+        except ValueError:
+            print("Please enter a number for age.")
+
     quarter = input("Enter student quarter: ")
 
     student = Student(student_name, student_id, grades, program, age, quarter)
@@ -54,7 +61,14 @@ def edit_student():
             student.student_name = input("Enter new student name: ")
             student.grades = input("Enter new student grades: ")
             student.program = input("Enter new student program: ")
-            student.age = int(input("Enter new student age: "))
+
+            while True:
+                try:
+                    student.age = int(input("Enter new student age: "))
+                    break
+                except ValueError:
+                    print("Please enter a number for age.")
+
             student.quarter = input("Enter new student quarter: ")
 
             print("Student updated")
