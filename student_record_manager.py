@@ -57,10 +57,24 @@ def edit_student():
             student.age = int(input("Enter new student age: "))
             student.quarter = input("Enter new student quarter: ")
 
-            print("Student updated successfully!")
+            print("Student updated")
 
 
-# 5: Menu
+# 5: Delete Student Records
+
+def delete_student():
+    student_id = input("Enter ID you want to remove: ")
+
+    for student in students:
+        if student.student_id == student_id:
+            students.remove(student)
+            print("Student removed")
+            return
+
+    print("Student not available. Please try again.")
+
+
+# 6: Menu
 
 def menu():
     while True:
@@ -68,7 +82,8 @@ def menu():
         print("1. Add Student")
         print("2. View Students")
         print("3. Edit Student")
-        print("4. Exit")
+        print("4. Delete Student")
+        print("5. Exit")
 
         choice = input("Enter the choice you want to do: ")
 
@@ -82,6 +97,9 @@ def menu():
             edit_student()
 
         elif choice == "4":
+            delete_student()
+
+        elif choice == "5":
             print("See Ya!")
             break
 
