@@ -46,3 +46,14 @@ Creates a new student record and stores it in the program.
 
 **8. Exit**
  Closes the program.
+
+ ## Issues i ran into
+VS Code trying to fight me
+
+extra spaces before def edit_student():
+
+no code underneath if student.student_id == student_id: to change info
+
+if someone puts twenty three instead of 23 it would crash. Added validation
+
+If there were no students, it would show a blank list.

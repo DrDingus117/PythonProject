@@ -42,6 +42,10 @@ def add_student():
 def view_students():
     print("\nStudent Records")
 
+    if not students:
+        print("No student records available at the moment.")
+        return
+
     for student in students:
         print("\nName:", student.student_name)
         print("ID:", student.student_id)
