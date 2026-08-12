@@ -35,19 +35,18 @@ Creates a new student record and stores it in the program.
 **4. Delete Student**
  Removes a student record from the program using the student's ID.
 
-**4. Save Students**
+**5. Save Students**
  Saves all current student records to `students.txt` so they can be used again later.
 
-**5. Load Students**
+**6. Load Students**
  Loads student records from `students.txt` into the program.
 
-**6. Exit**
+**7. Exit**
  Closes the program.
+
 
  ## Issues i ran into
 VS Code trying to fight me
-
-no code underneath if student.student_id == student_id: to change info
 
 if someone puts twenty three instead of 23 it would crash. Added validation
 
