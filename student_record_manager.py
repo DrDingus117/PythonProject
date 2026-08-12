@@ -93,11 +93,11 @@ def save_students():
     with open("students.txt", "w") as file:
         for student in students:
             file.write(
-                student.student_name + "," +
-                student.student_id + "," +
-                student.grades + "," +
-                student.program + "," +
-                str(student.age) + "," +
+                student.student_name + "." +
+                student.student_id + "." +
+                student.grades + "." +
+                student.program + "." +
+                str(student.age) + "." +
                 student.quarter + "\n"
             )
 
@@ -109,7 +109,7 @@ def load_students():
     try:
         with open("students.txt", "r") as file:
             for line in file:
-                data = line.strip().split(",")
+                data = line.strip().split(".")
 
                 student_name = data[0]
                 student_id = data[1]
@@ -144,7 +144,8 @@ def menu():
         print("3. Edit Student")
         print("4. Delete Student")
         print("5. Save Students")
-        print("6. Exit")
+        print("6. Load Students")
+        print("7. Exit")
 
         choice = input("Enter the choice you want to do: ")
 
@@ -163,9 +164,10 @@ def menu():
         elif choice == "5":
             save_students()
 
-        
-
         elif choice == "6":
+            load_students()
+      
+        elif choice == "7":
             print("See Ya!")
             break
 
