@@ -29,28 +29,24 @@ Creates a new student record and stores it in the program.
 **2. View Students**
  Displays all student records currently stored in the program.
 
-**3. Search Student**
- Searches for a student by their student ID and displays their information if found.
-
-**4. Update Student**
+**3. Update Student**
  Allows the user to modify an existing student's name, major, or GPA by entering their student ID.
 
-**5. Delete Student**
+**4. Delete Student**
  Removes a student record from the program using the student's ID.
 
-**6. Save Students**
+**5. Save Students**
  Saves all current student records to `students.txt` so they can be used again later.
 
-**7. Load Students**
+**6. Load Students**
  Loads student records from `students.txt` into the program.
 
-**8. Exit**
+**7. Exit**
  Closes the program.
+
 
  ## Issues i ran into
 VS Code trying to fight me
-
-no code underneath if student.student_id == student_id: to change info
 
 if someone puts twenty three instead of 23 it would crash. Added validation
 
